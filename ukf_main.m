@@ -1,3 +1,7 @@
+% Reference: R. van der Merwe and E. Wan. 
+% The Square-Root Unscented Kalman Filter for State and Parameter-Estimation, 2001
+%
+% By Zhe Hu at City University of Hong Kong, 05/01/2017
 n=3;      %number of state
 q=0.1;    %std of process 
 r=0.1;    %std of measurement
