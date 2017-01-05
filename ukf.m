@@ -70,11 +70,11 @@ P12=X2*diag(Wc)*Z2';                        %transformed cross-covariance
 K=P12/S2/S2';
 x=x1+K*(z-z1);                              %state update
 %S=cholupdate(S1,K*P12,'-');                %covariance update
-U = K*P12';
-for i = 1:L
+U = K*S2';
+for i = 1:m
     S1 = cholupdate(S1, U(:,i), '-');
 end
-S = S1;
+S=S1;
 
 function [y,Y,S,Y1]=ut(f,X,Wm,Wc,n,Rs)
 %Unscented Transformation
